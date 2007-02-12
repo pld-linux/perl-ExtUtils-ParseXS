@@ -6,7 +6,7 @@
 %define	pdir	ExtUtils
 %define	pnam	ParseXS
 Summary:	ExtUtils::ParseXS - converts Perl XS code into C code
-Summary(pl.UTF-8):   ExtUtils::ParseXS - przekształcanie kodu Perl XS do C
+Summary(pl.UTF-8):	ExtUtils::ParseXS - przekształcanie kodu Perl XS do C
 Name:		perl-ExtUtils-ParseXS
 Version:	2.17
 Release:	1
