@@ -6,7 +6,7 @@
 %define	pdir	ExtUtils
 %define	pnam	ParseXS
 Summary:	ExtUtils::ParseXS - converts Perl XS code into C code
-Summary(pl):	ExtUtils::ParseXS - przekszta≥canie kodu Perl XS do C
+Summary(pl.UTF-8):   ExtUtils::ParseXS - przekszta≈Çcanie kodu Perl XS do C
 Name:		perl-ExtUtils-ParseXS
 Version:	2.17
 Release:	1
@@ -32,12 +32,12 @@ creates the glue necessary to let Perl access those functions. The
 compiler uses typemaps to determine how to map C function parameters
 and variables to Perl values.
 
-%description -l pl
-ExtUtils::ParseXS kompiluje kod XS do kodu C osadzaj±c konstrukcje
-umoøliwiaj±ce funkcjom w C operowanie na warto∂ciach perlowych, a
-takøe tworzy kod sklejaj±cy umoøliwiaj±cy Perlowi dostÍp do tych
-funkcji. Kompilator wykorzystuje plik typemaps do okre∂lenia sposobu
-odwzorowywania parametrÛw funkcji i zmiennych C na warto∂ci perlowe.
+%description -l pl.UTF-8
+ExtUtils::ParseXS kompiluje kod XS do kodu C osadzajƒÖc konstrukcje
+umo≈ºliwiajƒÖce funkcjom w C operowanie na warto≈õciach perlowych, a
+tak≈ºe tworzy kod sklejajƒÖcy umo≈ºliwiajƒÖcy Perlowi dostƒôp do tych
+funkcji. Kompilator wykorzystuje plik typemaps do okre≈õlenia sposobu
+odwzorowywania parametr√≥w funkcji i zmiennych C na warto≈õci perlowe.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
