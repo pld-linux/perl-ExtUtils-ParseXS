@@ -8,13 +8,13 @@
 Summary:	ExtUtils::ParseXS - converts Perl XS code into C code
 Summary(pl.UTF-8):	ExtUtils::ParseXS - przekształcanie kodu Perl XS do C
 Name:		perl-ExtUtils-ParseXS
-Version:	2.19
+Version:	2.2002
 Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/ExtUtils/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	f236a751551e5288b4061352e3424b7a
+# Source0-md5:	96446b90880defc2200a8acfb9a6dfb8
 URL:		http://search.cpan.org/dist/ExtUtils-ParseXS/
 BuildRequires:	perl-Module-Build
 BuildRequires:	perl-devel >= 1:5.8.0
