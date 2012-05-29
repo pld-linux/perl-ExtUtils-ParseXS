@@ -8,15 +8,14 @@
 Summary:	ExtUtils::ParseXS - converts Perl XS code into C code
 Summary(pl.UTF-8):	ExtUtils::ParseXS - przekształcanie kodu Perl XS do C
 Name:		perl-ExtUtils-ParseXS
-Version:	2.22_06
-%define	filever	2.2206
+Version:	3.15
 Release:	1
 Epoch:		1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-module/ExtUtils/DAGOLDEN/%{pdir}-%{pnam}-%{filever}.tar.gz
-# Source0-md5:	5a78d0c4654c6b50e7c87da8b671e8a6
+Source0:	http://www.cpan.org/modules/by-module/ExtUtils/%{pdir}-%{pnam}-%{version}.tar.gz
+# Source0-md5:	528bb055757baef1d7dd245d086e429e
 URL:		http://search.cpan.org/dist/ExtUtils-ParseXS/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
@@ -42,7 +41,7 @@ funkcji. Kompilator wykorzystuje plik typemaps do określenia sposobu
 odwzorowywania parametrów funkcji i zmiennych C na wartości perlowe.
 
 %prep
-%setup -q -n %{pdir}-%{pnam}-%{filever}
+%setup -q -n %{pdir}-%{pnam}-%{version}
 
 %build
 %{__perl} Makefile.PL \
@@ -57,6 +56,11 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
+%{__rm} $RPM_BUILD_ROOT%{perl_vendorlib}/ExtUtils/ParseXS.pod
+# in perl-devel-tools
+%{__rm} $RPM_BUILD_ROOT%{_bindir}/xsubpp \
+	$RPM_BUILD_ROOT%{_mandir}/man1/xsubpp.1p
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -64,5 +68,9 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc Changes
 %{perl_vendorlib}/ExtUtils/ParseXS.pm
+%{perl_vendorlib}/ExtUtils/ParseXS
+%{perl_vendorlib}/ExtUtils/Typemaps.pm
+%{perl_vendorlib}/ExtUtils/Typemaps
 %{perl_vendorlib}/ExtUtils/xsubpp
-%{_mandir}/man3/ExtUtils::ParseXS.3pm*
+%{_mandir}/man3/ExtUtils::ParseXS*.3pm*
+%{_mandir}/man3/ExtUtils::Typemaps*.3pm*
